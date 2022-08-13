@@ -113,10 +113,10 @@ body {
 .header {
   position: absolute;
   width: 100%;
-  bottom: 0;
+  top: 0;
   left: 0;
   padding: 40px 0;
-  background-color: blueviolet;
+  z-index: 3;
 }
 .header__box {
   display: flex;
@@ -187,4 +187,71 @@ body {
 }
 .header__contact-link:hover .header__text {
   color: #7E779A;
+}
+
+.home {
+  background: #040B2A;
+}
+.home__box {  
+  padding: 200px 0 160px;
+  position: relative;
+}
+.home__text {
+  font-family: 'Pragmatica';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0.02em;
+  color: #7E779A;
+  margin-bottom: 16px;
+}
+.home__title {
+  max-width: 790px;
+  font-family: 'TT Commons';
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 70px;
+  color: #FFFFFF;
+  margin-bottom: 25px;
+}
+.home__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 333px;
+  height: 56px; 
+  background: linear-gradient(105.96deg, #3F0F72 13.07%, #791281 85.2%);
+  border-radius: 90px;
+  
+}
+.home__link span {
+  font-family: 'TT Commons';
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FFFFFF
+}
+.home__partners {
+  position: absolute;
+  bottom: 45px;
+  right: 0;
+  width: 100vmax;
+  max-width: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.home__partners-text {
+  font-family: 'TT Commons';
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 140%;
+  color: #FFFFFF;
+}
+.home__partners-icon {
+  display: block;
+  object-fit: contain;
+  height: 25px;
 }
