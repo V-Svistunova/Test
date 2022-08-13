@@ -51,6 +51,7 @@ select {
 }
 
 a{
+  color: inherit;
   text-decoration: none;
 }
 
@@ -58,6 +59,19 @@ button {
   cursor: pointer;
   background: none;
 }
+
+/* fonts style */
+
+@font-face {
+  font-family: 'Pragmatica';
+  src: url("./../fonts/Pragmatica-Book.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: 'TT Commons';
+  src: url("./../fonts/TTCommons-Regular.ttf") format("opentype");
+}
+
 
 /* global styles */
 
@@ -67,9 +81,10 @@ body {
 }
 
 body {	
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'TT Commons', Helvetica, sans-serif;
   font-weight: 500;
-	font-size: 16px;
+	font-style: normal;
+  font-size: 16px;
 	line-height: 20px;
   color: black;
 	overflow-x: hidden;
@@ -95,4 +110,81 @@ body {
   padding: 0 20px;
 }
 
-
+.header {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 40px 0;
+  background-color: blueviolet;
+}
+.header__box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo {
+  display: block;
+  object-fit: contain;
+  width: 139px;
+  height: 28px;
+}
+.header__logo-svg {
+  fill: white;  
+  transition: all 0.3s ease 0s;
+}
+.header__logo-link:hover .header__logo-svg {
+  fill: #7E779A;
+}
+.header__list {
+  display: flex;
+  width: 100vmax;
+  max-width: 294px;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__item {
+  font-size: 17px;
+  line-height: 16px;
+  color: #FFFFFF;
+  transition: all 0.3s ease 0s;
+}
+.header__item:hover {
+  color: #7E779A;
+}
+.header__contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vmax;
+  max-width: 420px;
+}
+.header__contact-link {
+  display: flex;
+  align-items: center;
+}
+.header__icon {
+  display: block;
+  object-fit: contain;
+  width: 18px;
+  margin-right: 12px;
+}
+.header__icon-svg {
+  fill: white;
+  transition: all 0.3s ease 0s;
+}
+.header__contact-link:hover .header__icon-svg {
+  fill: #7E779A;
+}
+.header__text {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  transition: all 0.3s ease 0s;
+}
+.header__contact-link:hover .header__text {
+  color: #7E779A;
+}
