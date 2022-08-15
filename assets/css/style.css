@@ -327,3 +327,29 @@ body {
   max-width: 570px;
   border-radius: 9px;
 }
+
+.services {
+  background: #F6F4F9;
+  padding: 115px 0;
+}
+.services__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.services__title {
+  
+}
+.services__subtitle {
+}
+.services__list {
+}
+.services__item {
+}
+.services__icon {
+}
+.services__text {
+}
+.services__icon-box {
+}
