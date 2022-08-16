@@ -90,6 +90,7 @@ body {
 	min-width: 320px;
 }
 .wrapper {
+  position: relative;
 	display: flex;
 	flex-direction: column;
 	min-height: 100%;
@@ -697,6 +698,7 @@ body {
 textarea.form__input {
   resize: vertical;
   min-height: 163px;
+  padding: 15px 20px;
 }
 .form__item:nth-child(2) .form__label {
   font-family: 'Pragmatica';
@@ -802,4 +804,49 @@ textarea.form__input {
   text-align: center;
   text-transform: uppercase;
   color: #FFFFFF;
+}
+
+.footer {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.footer__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 108px;
+}
+.footer__icons {
+  display: flex;
+  align-items: center;
+}
+.footer__icon {
+  width: 100%;
+  max-width: 37px;
+  height: 24px;
+  margin-right: 16px;
+}
+.footer__icon-svg {
+  fill:#545472;
+  transition: all 0.3s ease 0s;
+}
+.footer__icon:hover .footer__icon-svg {
+  fill: white;
+}
+.footer__content {
+  display: flex;
+  align-items: center;
+}
+.footer__text {
+  display: block;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 17px;
+  color: #7E779A;
+  margin-right: 46px;
+}
+.footer__text:last-child {
+  margin-right: 0;
 }
