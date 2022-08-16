@@ -217,12 +217,16 @@ body {
 .header__logo-link:hover .header__logo-svg {
   fill: #7E779A;
 }
+.header__content {
+  display: flex;
+}
 .header__list {
   display: flex;
   width: 100vmax;
   max-width: 294px;
   align-items: center;
   justify-content: space-between;
+  margin-right: 160px;
 }
 .header__item {
   font-size: 17px;
@@ -275,7 +279,6 @@ body {
   background-size: cover;
 }
 .home__box {  
-  height: 100vmax;
   padding: 250px 0 150px;
   position: relative;
 }
@@ -299,6 +302,7 @@ body {
 
 .home__link {
   position: relative;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -307,7 +311,7 @@ body {
   background: linear-gradient(105.96deg, #3F0F72 13.07%, #791281 85.2%);
   border-radius: 90px;  
   border: 0; 
-  transition: all 0.3s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 .home__link::before {
   content: "";
@@ -329,14 +333,21 @@ body {
 .home__link:hover {
   background: transparent;
 }
+.home__link:active {
+  top: 3px;
+}
+.home__link:hover span {
+  font-size: 14px;
+  line-height: 14px;
+ }
 .home__link span {
-  font-family: 'TT Commons';
   font-weight: 600;
   font-size: 16px;
   line-height: 14px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #FFFFFF
+  color: #FFFFFF;
+  transition: all 0.5s ease 0s;
 }
 .home__partners {
   position: absolute;
@@ -621,6 +632,7 @@ body {
 }
 
 .grade {
+  overflow: hidden;
   background: url("./../img/grade--bg.png") no-repeat center,
   #0B0B35;
   background-size: cover;
@@ -722,6 +734,25 @@ body {
   max-width: 670px;
   color: white;
 }
+.form__body {
+  position: relative;
+}
+.form__body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(43, 9, 80, 0.9) url("./../img/gif-loading.gif") center / 50px no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease 0s;
+}
+.form__body._sending::after {
+  opacity: 1;
+  visibility: visible;
+}
 .form__item {
   display: flex;
   flex-direction: column;
@@ -751,6 +782,9 @@ body {
   border: 2px solid #473E69;
   padding: 0 22px;
   border-radius: 4px;
+}
+.form__input._error {
+  box-shadow: 0 0 15px red;
 }
 .form__input::placeholder {
   position: absolute;
@@ -830,6 +864,7 @@ textarea.form__input {
 }
 .form__button {
   position: relative;
+  top: 0;
   width: 100%;
   max-width: 225px;
   height: 56px;
@@ -861,6 +896,9 @@ textarea.form__input {
 .form__button:hover {
   background: transparent;
 }
+.form__button:active {
+  top: 3px;
+}
 .form__button span {
   font-weight: 600;
   font-size: 14px;
@@ -869,6 +907,7 @@ textarea.form__input {
   text-align: center;
   text-transform: uppercase;
   color: #FFFFFF;
+  transition: all 0.3s ease 0s; 
 }
 
 .footer {
@@ -918,7 +957,89 @@ textarea.form__input {
   margin-right: 0;
 }
 
-@media (max-width: 900px) {
+
+.modal {  
+  position: fixed;
+  display: none;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  perspective: 500px;  
+  background: rgba(0,0,0, 0.4);
+}
+.modal .modal-wrapper {  
+  position: absolute;
+  width: 70%;
+  max-width: 500px;
+  top: 20%;
+  box-shadow: 2px 2px 18px 0px rgba(0,0,0,0.4);
+  animation-name:modalopen;
+  animation-duration:.6s;
+  transform: rotateX(0deg);
+}
+.modal__true .modal-header,
+.modal__true .modal-footer {
+  background: rgb(72, 194, 108);
+}
+
+.modal__false .modal-header,
+.modal__false .modal-footer {
+  background: rgb(194, 72, 82);
+}
+
+.modal-header,
+.modal-footer {    
+  padding: 20px 15px;
+  text-align: center;
+  color: white;
+}
+.modal-body {   
+  background: white;
+  padding: 40px;
+  font-size: 25px;
+  text-align: center;
+}
+.modal-header {
+  position: relative;
+}
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 35px;
+  transition: all 0.3s ease 0s;
+}
+.close-btn:hover {
+  color: #040B2A;
+}
+.close-btn:active {
+  top: 23px;
+}
+
+
+@keyframes modalopen{
+  from {
+      opacity: 0;
+      top: 3%;
+      transform: rotateX(15deg);
+  }
+  to {
+      opacity: 1;
+      top: 20%;
+      transform: rotateX(0deg);
+  }
+} 
+
+
+
+
+@media (max-width: 900px) {  
+  .modal-body {
+    flex-direction: column;
+  }
+
   .services__list {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -955,7 +1076,7 @@ textarea.form__input {
     top: 30px;
   }
 
-  .header__btn-menu {   
+  .header__btn-menu {
     display: block;
   }   
   
@@ -1023,7 +1144,8 @@ textarea.form__input {
   }
 
   .home__box {
-    padding: 120px 0 170px;
+    padding: 120px 0 170px;    
+    height: 100vmax;
   }
   .home__title {
     max-width: 300px;
