@@ -56,3 +56,9 @@ button {
   cursor: pointer;
   background: none;
 }
+
+svg path {
+  stroke:inherit;
+  stroke-width:inherit;
+  fill:inherit;
+  }

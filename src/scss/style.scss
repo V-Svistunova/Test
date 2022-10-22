@@ -7,7 +7,45 @@
 @import './fonts.scss';
 
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 32px 0;
+  background: rgba(16, 16, 29, 0.9);
   overflow-x: clip;
-}
 
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $secondary-color;    
+    text-decoration: none;
+    margin-right: 60px;    
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+
+  &__link--active {
+    color: $accent-color;
+  }
+}
 
