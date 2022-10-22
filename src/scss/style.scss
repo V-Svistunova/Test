@@ -1,3 +1,13 @@
-@import "fonts";
+@import './_reset';
+@import './vars';
+@import './mixins';
+@import './animation';
+@import './libs';
+@import './global';
+@import './fonts.scss';
+
+.header {
+  overflow-x: clip;
+}
 
 
