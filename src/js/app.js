@@ -2,6 +2,21 @@ import * as flsFunctions from "./modules/functions.js"
 
 flsFunctions.isWebp(); // для коректной работы пребразования файлов в webp формат
 
+// fixed header
+
+let headerBlock = document.querySelector('.header');
+let body = document.querySelector('body');
+
+body.addEventListener('scroll', () => { 
+  let scrollTop = body.scrollHeight;
+
+  if(scrollTop > 0) {
+    headerBlock.classList.add('header__fixed');
+  } else {
+    headerBlock.classList.remove('header__fixed');
+  }
+});
+
 
 
 //custom dropdown select
@@ -169,37 +184,6 @@ ItcCustomSelect.hideOpenSelect();
 const select1 = new ItcCustomSelect('#select-1');
 
 
-
-// fixed header
-const header = document.querySelector('.header');
-window.addEventListener('scroll', function() {
-  if (window.scrollY > 10) {
-    header.classList.add('header__fixed')
-  } else {
-    header.classList.remove('header__fixed')
-  }
-});
-
-
-// открытие/закрытие бургер меню 
-
-let btnMenu = document.querySelector('.header__btn-menu');
-let navBox = document.querySelector('.header__nav');
-
-btnMenu.addEventListener('click', function() {
-  btnMenu.classList.toggle('header__btn-menu--active');
-  navBox.classList.toggle('header__nav--active');
-});
-
-navLinks.forEach((elem) => {
-  elem.addEventListener('click', function() {
-    btnMenu.classList.remove('header__btn-menu--active');
-    navBox.classList.remove('header__nav--active');
-  });
-});
-
-
-
 //custom input file
 
 let inputs = document.querySelectorAll('.input__file');
@@ -218,3 +202,24 @@ let inputs = document.querySelectorAll('.input__file');
           label.querySelector('.input__file-button-text').innerText = labelVal;
       });
     });
+
+
+
+
+// открытие/закрытие бургер меню 
+
+let btnMenu = document.querySelector('.header__btn-menu');
+let navBox = document.querySelector('.header__nav');
+let navLinks = document.querySelectorAll('.header__link')
+
+btnMenu.addEventListener('click', function() {
+  btnMenu.classList.toggle('header__btn-menu--active');
+  navBox.classList.toggle('header__nav--active');
+});
+
+navLinks.forEach((elem) => {
+  elem.addEventListener('click', function() {
+    btnMenu.classList.remove('header__btn-menu--active');
+    navBox.classList.remove('header__nav--active');
+  });
+});    
