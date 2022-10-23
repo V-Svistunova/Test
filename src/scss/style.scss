@@ -8,6 +8,7 @@
 @import './fonts.scss';
 
 
+
 .header {
   position: absolute;
   top: 0;
@@ -20,6 +21,7 @@
 
   &__fixed {
     position: fixed;
+    z-index: 14;
   }
 
   &__container {
