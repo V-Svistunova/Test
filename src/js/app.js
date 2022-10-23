@@ -2,36 +2,7 @@ import * as flsFunctions from "./modules/functions.js"
 
 flsFunctions.isWebp(); // для коректной работы пребразования файлов в webp формат
 
-const header = document.querySelector('.header');
-window.addEventListener('scroll', function() {
-  if (window.scrollY > 10) {
-    header.classList.add('header__fixed')
-  } else {
-    header.classList.remove('header__fixed')
-  }
-});
 
-
-
-
-//custom input file
-
-let inputs = document.querySelectorAll('.input__file');
-    Array.prototype.forEach.call(inputs, function (input) {
-      let label = input.nextElementSibling,
-        labelVal = label.querySelector('.input__file-button-text').innerText;
-  
-      input.addEventListener('change', function (e) {
-        let countFiles = '';
-        if (this.files && this.files.length >= 1)
-          countFiles = this.files.length;
-  
-        if (countFiles)
-          label.querySelector('.input__file-button-text').innerText = 'Selected files: ' + countFiles;
-        else
-          label.querySelector('.input__file-button-text').innerText = labelVal;
-      });
-    });
 
 //custom dropdown select
 
@@ -196,3 +167,54 @@ ItcCustomSelect.hideOpenSelect();
 
 
 const select1 = new ItcCustomSelect('#select-1');
+
+
+
+// fixed header
+const header = document.querySelector('.header');
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 10) {
+    header.classList.add('header__fixed')
+  } else {
+    header.classList.remove('header__fixed')
+  }
+});
+
+
+// открытие/закрытие бургер меню 
+
+let btnMenu = document.querySelector('.header__btn-menu');
+let navBox = document.querySelector('.header__nav');
+
+btnMenu.addEventListener('click', function() {
+  btnMenu.classList.toggle('header__btn-menu--active');
+  navBox.classList.toggle('header__nav--active');
+});
+
+navLinks.forEach((elem) => {
+  elem.addEventListener('click', function() {
+    btnMenu.classList.remove('header__btn-menu--active');
+    navBox.classList.remove('header__nav--active');
+  });
+});
+
+
+
+//custom input file
+
+let inputs = document.querySelectorAll('.input__file');
+    Array.prototype.forEach.call(inputs, function (input) {
+      let label = input.nextElementSibling,
+        labelVal = label.querySelector('.input__file-button-text').innerText;
+  
+      input.addEventListener('change', function (e) {
+        let countFiles = '';
+        if (this.files && this.files.length >= 1)
+          countFiles = this.files.length;
+  
+        if (countFiles)
+          label.querySelector('.input__file-button-text').innerText = 'Selected files: ' + countFiles;
+        else
+          label.querySelector('.input__file-button-text').innerText = labelVal;
+      });
+    });
