@@ -12,9 +12,9 @@
       <div class="home__container container">
         <div class="home__box">
           <h2 class="home__title">
-            <span class="home__title--color">Lorem ipsum</span> 
+            <span class="home__title--accent">Lorem ipsum</span> 
             dolor sit amet consectetur 
-            <span class="home__title--color">adipiscing</span>
+            <span class="home__title--accent">adipiscing</span>
           </h2>
           <h6 class="home__subtitle">
             At vero eos et accusamus et iusto odio dignissimos ducimus!
@@ -29,6 +29,105 @@
             <a class="home__btn" href="#"><span>more info</span></a>
           </div>
         </div>
+      </div>
+    </section>
+    <section class="order">
+      <div class="order__container container">
+        <h3 class="order__title">making 
+          <span class="order__title--accent">an order</span>
+        </h3>
+        <h6 class="order__subtitle">
+          Before filling out the form, check out our work scheme!
+        </h6>
+        <div class="order__box">
+          <div class="order__box--line"></div>
+          <ul class="order__list">
+            <li class="order__item">
+              <div class="order__img-box">
+                <img class="order__img" src="@img/order-1.svg" alt="icon">
+              </div>
+              <p class="order__text">
+                Lorem ipsum dolor sit amet
+              </p>
+            </li>
+            <li class="order__item">
+              <div class="order__img-box">
+                <img class="order__img" src="@img/order-2.svg" alt="icon">
+              </div>
+              <p class="order__text">
+                Сonsecteturadipiscing elit
+              </p>
+            </li>
+            <li class="order__item">
+              <div class="order__img-box">
+                <img class="order__img" src="@img/order-3.svg" alt="icon">
+              </div>
+              <p class="order__text">
+                Sed do eiusmod tempor
+              </p>
+            </li>
+            <li class="order__item">
+              <div class="order__img-box">
+                <img class="order__img" src="@img/order-4.svg" alt="icon">
+              </div>
+              <p class="order__text">
+                Esse cillum dolore eu fugiat
+              </p>
+            </li>
+            <li class="order__item">
+              <div class="order__img-box order__img--last-child">
+                <img class="order__img" src="@img/order-5.svg" alt="icon">
+              </div>
+              <p class="order__text">
+                Excepteur sint occaecat cupidatat non proident
+              </p>
+            </li>
+          </ul>
+        </div>
+        <form class="order__form" action="#" method="post">   
+          <div class="order__form-box">
+            <div class="order__form-item itc-select" id="select-1">
+              <button type="button" class="itc-select__toggle" name="select" value="select" data-select="toggle" data-index="-1">
+                <span>Select the system type</span>
+              </button>
+              <!-- Выпадающий список -->
+              <div class="itc-select__dropdown">
+                <ul class="itc-select__options">
+                  <li class="itc-select__option itc-select__item_selected" data-select="option" data-value="sed" data-index="0">Sed ut perspiciatis</li>
+                  <li class="itc-select__option" data-select="option" data-value="nemo" data-index="1">Nemo enim ipsam</li>
+                  <li class="itc-select__option" data-select="option" data-value="et" data-index="2">Et harum quidem</li>
+                  <li class="itc-select__option" data-select="option" data-value="temporibus" data-index="3">Temporibus autem</li>
+                  <li class="itc-select__option" data-select="option" data-value="itaque" data-index="4">Itaque earum rerum</li>
+                  <li class="itc-select__option" data-select="option" data-value="sed" data-index="5">Sed ut perspiciatis</li>
+                  <li class="itc-select__option" data-select="option" data-value="nemo" data-index="6">Nemo enim ipsam</li>
+                  <li class="itc-select__option" data-select="option" data-value="et" data-index="7">Et harum quidem</li>
+                  <li class="itc-select__option" data-select="option" data-value="temporibus" data-index="8">Temporibus autem</li>
+                  <li class="itc-select__option" data-select="option" data-value="itaque" data-index="9">Itaque earum rerum</li>
+                </ul>
+              </div>
+            </div>
+            <input class="order__form-item" type="email" name="email" id="email" placeholder="Your e-mail">
+            <input class="order__form-item" type="text" name="name" id="name" placeholder="Your name">  
+            <div class="order__form-progress">
+              <div class="order__progress-box">
+                <span class="order__progress-text">
+                  Sed ut perspiciatis, unde omnis iste natus
+                </span>
+                <span class="order__progress-value"><span id="rangeValue">75</span>%</span>
+              </div>
+              <input class="order__progress-line" oninput="rangeValue.innerText = this.value" type="range" min="0" max="100" value="75" name="range" step="1"/>
+              
+            </div>
+            <div class="order__form-item order__form-file input__wrapper">
+              <input name="file" type="file" id="input__file" class="input input__file" multiple>
+              <label for="input__file" class="input__file-button">
+                 <span class="input__file-icon-wrapper"><img class="input__file-icon" src="@img/order__file.svg" alt="Выбрать файл" width="25"></span>
+                 <span class="input__file-button-text">Attach a file</span>
+              </label>
+           </div>
+           <input class="order__form-item order__form-send" type="submit" value="send" placeholder="send">
+          </div>     
+        </form>
       </div>
     </section>
   </main>
