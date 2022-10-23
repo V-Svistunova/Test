@@ -17,6 +17,10 @@
   background: rgba(16, 16, 29, 0.9);
   overflow-x: clip;
 
+  &__fixed {
+    position: fixed;
+  }
+
   &__container {
     display: flex;
     align-items: center;

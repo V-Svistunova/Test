@@ -2,7 +2,14 @@ import * as flsFunctions from "./modules/functions.js"
 
 flsFunctions.isWebp(); // для коректной работы пребразования файлов в webp формат
 
-let progressValue = document.querySelector('.order__progress-value');
+const header = document.querySelector('.header');
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 10) {
+    header.classList.add('header__fixed')
+  } else {
+    header.classList.remove('header__fixed')
+  }
+});
 
 
 
