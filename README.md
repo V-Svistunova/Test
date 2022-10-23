@@ -1,4 +1,4 @@
-# [Deploy webpages: turnkey-solution](https://v-svistunova.github.io/test/dist)
+# [Deploy webpages: test](https://v-svistunova.github.io/test/dist)
 
 
 # Как пользоваться сборкой
