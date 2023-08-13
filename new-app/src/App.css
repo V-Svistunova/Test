@@ -1,0 +1,15 @@
+
+.header {
+  font-size: 40px;
+  font-weight: 400;
+  margin: 30px auto 16px;
+  text-align: center;
+}
+.Tournament {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+
+

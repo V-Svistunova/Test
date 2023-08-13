@@ -1,0 +1,47 @@
+.Loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px auto 10px;
+}
+.Loader-value {
+  font-size: 10px;
+  font-weight: 400;
+  margin-top: 4px;
+}
+
+.loader {
+  display: block;
+  --height-of-loader: 4px;
+  --loader-color: #00D749;
+  width: 100%;
+  height: var(--height-of-loader);
+  border-radius: 30px;
+  background-color: #373352;
+  position: relative;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  background: var(--loader-color);
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-radius: 30px;
+  animation: moving 1s ease-in-out infinite;
+  ;
+}
+
+@keyframes moving {
+  50% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
+    right: 0;
+    left: unset;
+  }
+}
