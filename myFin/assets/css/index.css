@@ -127,7 +127,7 @@
 .info-stock__select {
   font-size: 16px;
   font-weight: 400;
-  padding: 7px 10px;
+  padding: 7px 25px 7px 10px;
   border-radius: 3px;
   border: 1px solid var(--borders-line, #E8ECEF);
   background-color: var(--background-white, #FFF);
