@@ -17,6 +17,9 @@
     .for-mobile {
         display: block;
     }
+    .container {
+        padding: 0 15px;
+    }
     .index-main__text {
         max-height: 72px;
         overflow: hidden;
@@ -46,6 +49,10 @@
     }
     .investments__item {
         background-size: 30%;
+        padding: 20px;
+    }
+    .info-calendar, 
+    .info-stock {
         padding: 20px;
     }
     .investments__item-text {

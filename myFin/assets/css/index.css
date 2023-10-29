@@ -181,10 +181,15 @@
 .info-stock__price {
   font-size: 16px;
   font-weight: 400;
+  padding: 0 5px;
+  white-space: nowrap;
 }
 .info-stock__result {
   font-size: 14px;
   font-weight: 400;
+}
+.info-stock__result-percent {
+  white-space: nowrap;
 }
 .info-stock__result-top {
   color: var(--signal-succsess, #7FC03C);
