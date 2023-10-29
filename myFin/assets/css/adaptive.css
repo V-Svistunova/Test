@@ -1,0 +1,66 @@
+@media screen and (max-width: 780px) {
+
+    .investments__item,
+    .investments__item:first-child,
+    .investments__item:nth-child(2),
+    .investments__item:nth-child(3),
+    .investments__item:nth-child(4) {
+        max-width: 100%;
+    }
+    .info__box {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .for-mobile {
+        display: block;
+    }
+    .index-main__text {
+        max-height: 72px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -moz-box;
+        -moz-box-orient: vertical;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        line-clamp: 3;
+        box-orient: vertical;
+        transition: all 0.3s ease 0s;
+    }
+    .index-main__text--open .index-main__text {
+        max-height: initial;
+        -webkit-line-clamp: initial;
+        line-clamp: initial;
+    }
+    .index-main__text--open .index-main__btn svg {
+        transform: rotate(180deg);
+    }
+    .index-main__text--open .index-main__btn .visible {
+        display: none;
+    }
+    .index-main__text--open .index-main__btn .hidden {
+        display: block;
+    }
+    .investments__item {
+        background-size: 30%;
+        padding: 20px;
+    }
+    .investments__item-text {
+        max-width: 83%;
+    }
+    .tabs>label {
+        width: 50%;
+    }
+    .investments__item,
+    .investments__item:first-child,
+    .investments__item:nth-child(2),
+    .investments__item:nth-child(3),
+    .investments__item:nth-child(4) {
+        max-height: 190px;
+    }
+
+
+}

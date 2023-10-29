@@ -3,9 +3,469 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Myfin</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/css/all.css">
 </head>
-<body>
-  
+<body class="body">
+  <div class="wrapper">
+      <header class="header">
+          <div class="container">
+          </div>
+      </header>
+      <main class="main index">
+          <section class="index-main">
+            <div class="container">
+              <div class="index-main__box">
+                <h1 class="index-main__title">Облигации в России</h1>
+                <div class="index-main__content">
+                  <p class="index-main__text">
+                    Облигации федерального, субфедерального займа, еврооблигации и облигации самых известных 
+                    компаний России. Изучайте стоимость облигаций и ее изменение, доходность, купонные выплаты 
+                    и многие другие показатели. Чтобы узнать больше про облигации и инвестирование в ценные 
+                    бумаги, посетите наш <a href="#">образовательный раздел</a> с множеством полезной информации.
+                  </p>
+                  <div class="for-mobile">
+                    <div class="index-main__btn"
+                    onclick="document.querySelector('.index-main__content').classList.toggle('index-main__text--open')" 
+                    >
+                      <span class="visible">Показать весь</span> 
+                      <span class="hidden">Скрыть</span>
+                      <svg width="10px" 
+                      fill="#388EC3" 
+                      xmlns="http://www.w3.org/2000/svg" 
+                      xmlns:xlink="http://www.w3.org/1999/xlink" 
+                      version="1.1" 
+                      viewBox="0 0 129 129" 
+                      enable-background="new 0 0 129 129">
+                        <g>
+                          <path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z"/>
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <form class="index-main__form" action="#">
+                  <input class="index-main__input" type="search" name="form['search']" id="search" placeholder="Название или тикер">
+                  <button class="index-main__submit" type="submit">
+                    <img src="./assets/img/search.svg" alt="search icon">
+                  </button>
+                </form>
+              </div>
+            </div>
+          </section>
+          <section class="investments">
+            <div class="container">
+              <div class="investments__box">
+                <h2 class="investments__title">Все об инвестициях</h2>
+                <ul class="investments__list">
+                  <li class="investments__item box"
+                  style="background-image: url('./assets/img/investments-1--bg.png');"  
+                  >
+                    <div class="investments__item-box">
+                      <div class="investments__item-title subtitle">Акции</div>
+                      <p class="investments__item-text">
+                        Покупка акций российских и мировых компаний
+                      </p>
+                    </div>
+                    <a class="investments__item-link btn--green" href="#">Купить</a>
+                  </li>
+                  <li class="investments__item box">
+                    <div class="investments__item-box">
+                      <div class="investments__item-title subtitle">Облигации</div>
+                      <p class="investments__item-text">
+                        Инвестируйте в ценные бумаги и зарабатывайте на процентах
+                      </p>
+                    </div>
+                    <a class="investments__item-link btn--green" href="#">Подобрать</a>
+                  </li>
+                  <li class="investments__item box">
+                    <div class="investments__item-box">
+                      <div class="investments__item-title subtitle">Дивиденды</div>
+                      <p class="investments__item-text">
+                        Размеры дивидендов и даты выплат на календаре
+                      </p>
+                    </div>
+                    <a class="investments__item-link btn" href="#">Подробнее</a>
+                  </li>
+                  <li class="investments__item box"
+                  style="background-image: url('./assets/img/investments-2--bg.png');" 
+                  >
+                    <div class="investments__item-box">
+                      <div class="investments__item-title subtitle">Индивидуальный инвестиционный счет</div>
+                      <p class="investments__item-text">
+                        Откройте счет и увеличивайте доходность своих инвестиций
+                      </p>
+                    </div>
+                    <a class="investments__item-link btn--green" href="#">Открыть ИИС</a>
+                  </li>
+                  <li class="investments__item box" 
+                  style="background-image: url('./assets/img/investments-3--bg.png');" 
+                  >
+                    <div class="investments__item-box">
+                      <div class="investments__item-title subtitle">Брокеры</div>
+                      <p class="investments__item-text">
+                        Инвестируйте вместе с профессионалами.
+                      </p>
+                    </div>
+                    <a class="investments__item-link btn" href="#">Выбрать</a>
+                  </li>
+                  <li class="investments__item box">
+                    <div class="investments__item-box">
+                      <div class="investments__item-title subtitle">Обучение</div>
+                      <p class="investments__item-text">
+                        Учитесь инвестировать БЕСПЛАТНО вместе с Банкирос
+                      </p>
+                    </div>
+                    <a class="investments__item-link btn" href="#">Пройти обучение</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section class="info">
+            <div class="container">
+              <div class="info__box">
+                <div class="info-stock box">
+                  <div class="info-stock__top">
+                    <div class="info-stock__title subtitle">Акции</div>
+                    <div class="info-stock__select-box">
+                      <select class="info-stock__select" 
+                      style="background-image: url('./assets/img/skip-track-down.svg');"
+                      name="select" 
+                      >
+                        <option value="value1" selected>1 день</option>
+                        <option value="value2">1 неделя</option>
+                        <option value="value3">1 месяц</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="info-stock__tabs">
+                    <div class="tabs">
+                      <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked >
+                      <label class="tab-btn-1" for="tab-btn-1">
+                          <span>Лидеры роста</span>
+                      </label>
+                      <input type="radio" name="tab-btn" id="tab-btn-2" value="">
+                      <label class="tab-btn-2" for="tab-btn-2">
+                          <span>Tab inactive</span>
+                      </label>
+
+                      <div class="info-stock__content" id="content-1">
+                        <table class="info-stock__table">
+                          <thead class="info-stock__head">
+                            <tr>
+                              <th>Тикер</th>
+                              <th>Посл. цена</th>
+                              <th>Изм.</th>
+                            </tr>
+                          </thead>
+                          <tbody class="info-stock__body">
+                            <tr>
+                              <td>
+                                <div class="info-stock__ticker">
+                                  <div class="info-stock__ticker-img-wrap">
+                                    <img class="info-stock__ticker-img" 
+                                    src="./assets/img/stock-1.svg" 
+                                    alt="stock" >
+                                  </div>
+                                  <div class="info-stock__ticker-title">
+                                    <a class="info-stock__ticker-link" href="#">ВТБ банк</a>
+                                    <span class="info-stock__ticker-text">VTBR</span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="info-stock__price">18.24 ₽</div>
+                              </td>
+                              <td>
+                                <div class="info-stock__result info-stock__result-top">
+                                  <div class="info-stock__result-percent">
+                                    <span class="info-stock__result-percent--arrow">&uarr;</span>
+                                    <span class="">138.75 %</span>
+                                  </div>
+                                  <div class="info-stock__result-value">4.90 ₽</div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="info-stock__ticker">
+                                  <div class="info-stock__ticker-img-wrap">
+                                    <img class="info-stock__ticker-img" 
+                                    src="./assets/img/stock-2.svg" 
+                                    alt="stock" >
+                                  </div>
+                                  <div class="info-stock__ticker-title">
+                                    <a class="info-stock__ticker-link" href="#">Пао «Русгидро»</a>
+                                    <span class="info-stock__ticker-text">HYDR</span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="info-stock__price">4.90 ₽</div>
+                              </td>
+                              <td>
+                                <div class="info-stock__result info-stock__result-top">
+                                  <div class="info-stock__result-percent">
+                                    <span class="info-stock__result-percent--arrow">&uarr;</span>
+                                    <span class="">138.75 %</span>
+                                  </div>
+                                  <div class="info-stock__result-value">4.90 ₽</div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="info-stock__ticker">
+                                  <div class="info-stock__ticker-img-wrap">
+                                    <img class="info-stock__ticker-img" 
+                                    src="./assets/img/stock-3.svg" 
+                                    alt="stock" >
+                                  </div>
+                                  <div class="info-stock__ticker-title">
+                                    <a class="info-stock__ticker-link" href="#">The Walt Disney Company</a>
+                                    <span class="info-stock__ticker-text">DIS-RM</span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="info-stock__price">54.23 $</div>
+                              </td>
+                              <td>
+                                <div class="info-stock__result info-stock__result--bottom">
+                                  <div class="info-stock__result-percent">
+                                    <span class="info-stock__result-percent--arrow">&uarr;</span>
+                                    <span class="">138.75 %</span>
+                                  </div>
+                                  <div class="info-stock__result-value">4.90 ₽</div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="info-stock__ticker">
+                                  <div class="info-stock__ticker-img-wrap">
+                                    <img class="info-stock__ticker-img" 
+                                    src="./assets/img/stock-4.svg" 
+                                    alt="stock" >
+                                  </div>
+                                  <div class="info-stock__ticker-title">
+                                    <a class="info-stock__ticker-link" href="#">Газпром</a>
+                                    <span class="info-stock__ticker-text">GAZP</span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="info-stock__price">14.36 ₽</div>
+                              </td>
+                              <td>
+                                <div class="info-stock__result info-stock__result--bottom">
+                                  <div class="info-stock__result-percent">
+                                    <span class="info-stock__result-percent--arrow">&uarr;</span>
+                                    <span class="">138.75 %</span>
+                                  </div>
+                                  <div class="info-stock__result-value">4.90 ₽</div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="info-stock__ticker">
+                                  <div class="info-stock__ticker-img-wrap">
+                                    <img class="info-stock__ticker-img" 
+                                    src="./assets/img/stock-2.svg" 
+                                    alt="stock" >
+                                  </div>
+                                  <div class="info-stock__ticker-title">
+                                    <a class="info-stock__ticker-link" href="#">Пао «Русгидро»</a>
+                                    <span class="info-stock__ticker-text">HYDR</span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="info-stock__price">4.90 ₽</div>
+                              </td>
+                              <td>
+                                <div class="info-stock__result info-stock__result-top">
+                                  <div class="info-stock__result-percent">
+                                    <span class="info-stock__result-percent--arrow">&uarr;</span>
+                                    <span class="">138.75 %</span>
+                                  </div>
+                                  <div class="info-stock__result-value">4.90 ₽</div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="info-stock__ticker">
+                                  <div class="info-stock__ticker-img-wrap">
+                                    <img class="info-stock__ticker-img" 
+                                    src="./assets/img/stock-1.svg" 
+                                    alt="stock" >
+                                  </div>
+                                  <div class="info-stock__ticker-title">
+                                    <a class="info-stock__ticker-link" href="#">ВТБ банк</a>
+                                    <span class="info-stock__ticker-text">VTBR</span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="info-stock__price">18.24 ₽</div>
+                              </td>
+                              <td>
+                                <div class="info-stock__result info-stock__result-top">
+                                  <div class="info-stock__result-percent">
+                                    <span class="info-stock__result-percent--arrow">&uarr;</span>
+                                    <span class="">138.75 %</span>
+                                  </div>
+                                  <div class="info-stock__result-value">4.90 ₽</div>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <div class="info-stock__bottom">
+                          <a class="info-stock__bottom-link" href="#">
+                            <span>Больше лидеров роста</span>
+                            <span>&#8250;</span>
+                          </a>
+                          <div class="info-stock__bottom-update">Обновлено в 12:30</div>
+                        </div>
+                      </div>
+                      <div id="content-2">
+                        <p class="">
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed aperiam officia sint consequatur ullam consectetur alias esse exercitationem, ducimus reprehenderit ut. Ratione laboriosam magni provident debitis exercitationem eveniet nemo molestias!
+                          Officia, consequatur ratione totam enim nostrum earum praesentium fugit reprehenderit quisquam accusantium non, ipsam mollitia aspernatur pariatur accusamus officiis ad vero repudiandae facilis. Ea, eum quos voluptates error atque impedit?
+                          Non, impedit quia quas blanditiis fuga cumque repellendus quis deserunt beatae, doloremque eveniet sed adipisci ipsum doloribus reiciendis modi autem nobis dolorem natus aliquid accusamus fugit. 
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="info-calendar box">
+                  <div class="info-calendar__title subtitle">Экономический календарь</div>
+                  <div class="info-calendar__box">
+                    <div class="info-calendar__block">
+                      <div class="info-calendar__day">Ноябрь 17</div>
+                      <ul class="info-calendar__list">
+                        <li class="info-calendar__item indicator--red">
+                          <a class="info-calendar__item-link" href="#">
+                            <div class="info-calendar__item-time">13:00</div>
+                            <div class="info-calendar__item-img-wrap">
+                              <img class="info-calendar__item-img" src="./assets/img/flag-russia.svg" alt="flag">
+                            </div>
+                            <div class="info-calendar__item-indicator"></div>
+                            <div class="info-calendar__item-title">Индекс цен на продовольствие</div>
+                          </a>
+                        </li>
+                        <li class="info-calendar__item indicator--red">
+                          <a class="info-calendar__item-link" href="#">
+                            <div class="info-calendar__item-time">13:00</div>
+                            <div class="info-calendar__item-img-wrap">
+                              <img class="info-calendar__item-img" src="./assets/img/flag-russia.svg" alt="flag">
+                            </div>
+                            <div class="info-calendar__item-indicator"></div>
+                            <div class="info-calendar__item-title">Employment Overall Flash</div>
+                          </a>
+                        </li>
+                        <li class="info-calendar__item indicator--orange">
+                          <a class="info-calendar__item-link" href="#">
+                            <div class="info-calendar__item-time">16:45</div>
+                            <div class="info-calendar__item-img-wrap">
+                              <img class="info-calendar__item-img" src="./assets/img/flag-2.svg" alt="flag">
+                            </div>
+                            <div class="info-calendar__item-indicator"></div>
+                            <div class="info-calendar__item-title">Изменение занятости (кв/кв)</div>
+                          </a>
+                        </li>
+                        <li class="info-calendar__item indicator--orange">
+                          <a class="info-calendar__item-link" href="#">
+                            <div class="info-calendar__item-time">23:15</div>
+                            <div class="info-calendar__item-img-wrap">
+                              <img class="info-calendar__item-img" src="./assets/img/flag-2.svg" alt="flag">
+                            </div>
+                            <div class="info-calendar__item-indicator"></div>
+                            <div class="info-calendar__item-title">
+                              Изменение занятости (кв/кв), ИПЦ Франции, базовый индекс цен производителей (PPI) (г/г) (окт)
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="info-calendar__block">
+                      <div class="info-calendar__day">Ноябрь 18</div>
+                      <ul class="info-calendar__list">
+                        <li class="info-calendar__item indicator--orange">
+                          <a class="info-calendar__item-link" href="#">
+                            <div class="info-calendar__item-time">09:00</div>
+                            <div class="info-calendar__item-img-wrap">
+                              <img class="info-calendar__item-img" src="./assets/img/flag-2.svg" alt="flag">
+                            </div>
+                            <div class="info-calendar__item-indicator"></div>
+                            <div class="info-calendar__item-title">ИПЦ Франции</div>
+                          </a>
+                        </li>
+                        <li class="info-calendar__item indicator--red">
+                          <a class="info-calendar__item-link" href="#">
+                            <div class="info-calendar__item-time">13:00</div>
+                            <div class="info-calendar__item-img-wrap">
+                              <img class="info-calendar__item-img" src="./assets/img/flag-russia.svg" alt="flag">
+                            </div>
+                            <div class="info-calendar__item-indicator"></div>
+                            <div class="info-calendar__item-title">Employment Overall Flash</div>
+                          </a>
+                        </li>
+                        <li class="info-calendar__item indicator--green">
+                          <a class="info-calendar__item-link" href="#">
+                            <div class="info-calendar__item-time">16:45</div>
+                            <div class="info-calendar__item-img-wrap">
+                              <img class="info-calendar__item-img" src="./assets/img/flag-2.svg" alt="flag">
+                            </div>
+                            <div class="info-calendar__item-indicator"></div>
+                            <div class="info-calendar__item-title">Изменение занятости (кв/кв)</div>
+                          </a>
+                        </li>
+                        <li class="info-calendar__item indicator--orange">
+                          <a class="info-calendar__item-link" href="#">
+                            <div class="info-calendar__item-time">23:15</div>
+                            <div class="info-calendar__item-img-wrap">
+                              <img class="info-calendar__item-img" src="./assets/img/flag-2.svg" alt="flag">
+                            </div>
+                            <div class="info-calendar__item-indicator"></div>
+                            <div class="info-calendar__item-title">
+                              Изменение занятости (кв/кв), ИПЦ Франции
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="info-calendar__bottom">
+                    <a class="info-calendar__bottom-link" href="#">
+                      <span>Больше событий</span>
+                      <span>&#8250;</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+      </main>
+      <footer class="footer">
+          <div class="container">
+              <div class="footer__box">
+
+              </div>
+          </div>
+      </footer>
+  </div>
+
+  <script src="./assets/js/index.js"></script>
+
 </body>
 </html>

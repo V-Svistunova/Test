@@ -1,0 +1,185 @@
+
+:root {
+  --accent-color: #95CE5A;
+  --primary-links-olor: #388EC3;
+  --text-black: #333E50;
+}
+
+html,
+body {
+height: 100%;
+}
+
+.body {	
+  position: relative;
+  background: #FFF;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--text-black, #333E50);
+  overflow-x: hidden;
+  min-width: 320px;
+  transition: all 0.3s ease 0s;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;   
+}
+
+.main {
+  flex: 1 0 auto;
+}
+.footer {
+  flex: 0 0 auto;
+}
+
+.container{
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+
+
+a {
+  color: var(--primary-links-olor, #388EC3);
+}
+a:hover {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+.no-display {
+  display: none !important;
+}
+.hidden {
+  display: none;
+}
+.for-mobile {
+  display: none;
+}
+.for-tablet {
+  display: none;
+}
+.not-for-mobile {
+  display: block;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 36px; 
+}
+h2 {
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 30px; /* 125% */
+}
+.subtitle {
+  color: var(--text-black, #333E50);
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 30px; 
+}
+.box {
+  border-radius: 5px;
+  border: 1px solid var(--borders-line, #E8ECEF);
+}
+.btn {
+  border-radius: 5px;
+  background: var(--background-white, #FFF);
+  color: var(--text-black, #333E50);
+  border: 1px solid #DADEE2;
+}
+.btn:hover {
+  border: 1px solid  var(--text-black, #333E50);
+  color: var(--text-black, #333E50);
+}
+.btn--green {
+  border-radius: 5px;
+  background: var(--accent-color);
+  color: #FFF;
+  box-shadow: 0px 5px 20px 0px rgba(51, 62, 80, 0.15);
+}
+.btn--green:hover {
+  box-shadow: 0px 5px 8px rgba(149, 206, 90, 0.80);
+  color: #FFF;
+}
+
+
+.tabs {
+  font-size: 0;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+}
+
+.tabs>input[type="radio"] {
+  display: none;
+}
+
+.tabs>div {
+  /* скрыть контент по умолчанию */
+  display: none;
+  font-size: 14px;
+}
+.tabs > div p {
+  padding: 15px 0;
+}
+
+/* отобразить контент, связанный с вабранной радиокнопкой (input type="radio") */
+#tab-btn-1:checked~#content-1,
+#tab-btn-2:checked~#content-2,
+#tab-btn-3:checked~#content-3 {
+  display: block;
+  height: 100%;
+  color: var(--link-color);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.tabs>label {
+  width: 33.33%;
+  display: inline-block;
+  vertical-align: middle;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  top: 1px;
+  
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%; 
+  color: var(--text-light-gray, #ADB4BF);
+  text-transform: uppercase;
+}
+.tabs>label span {
+  display: inline-block;
+  padding: 8px 0;
+}
+
+.tabs>label:not(:first-of-type) {
+  border-left: none;
+}
+
+.tabs>input[type="radio"]:checked+label {
+  color: var(--text-black, #333E50);
+  font-size: 14px;
+}
+.tabs>input[type="radio"]:checked+label span {
+  position: relative;
+}
+.tabs>input[type="radio"]:checked+label span::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "";
+  height: 3px;
+  border-radius: 50px;
+  background: var(--primary-green, #95CE5A);
+}
+
+
